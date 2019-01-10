@@ -44,9 +44,8 @@ module.exports = {
           'ts-loader'
         ].filter(Boolean)
       },
-      // css
       {
-        test: /\.css$/,
+        test: /\.s?css$/,
         use: [
           isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
           {
@@ -67,7 +66,7 @@ module.exports = {
                 require('postcss-url')(),
                 require('postcss-preset-env')({
                   /* use stage 2 features (defaults) */
-                  stage: 2,
+                  stage: 2
                 }),
                 require('postcss-reporter')(),
                 require('postcss-browser-reporter')({
@@ -75,6 +74,9 @@ module.exports = {
                 })
               ]
             }
+          },
+          {
+            loader: 'sass-loader'
           }
         ]
       },
