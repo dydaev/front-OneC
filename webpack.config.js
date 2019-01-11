@@ -14,7 +14,7 @@ var WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 module.exports = {
   context: sourcePath,
   entry: {
-    app: './main.tsx'
+    app: './root.tsx'
   },
   output: {
     path: outPath,
@@ -76,7 +76,10 @@ module.exports = {
             }
           },
           {
-            loader: 'sass-loader'
+            loader: 'sass-loader',
+            options: {
+              includePaths: ['./node_modules']
+            }
           }
         ]
       },
