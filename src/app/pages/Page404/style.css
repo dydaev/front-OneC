@@ -1,0 +1,26 @@
+.wrappError {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.back a {
+  color: #2879ff;
+}
+
+.back a:hover {
+  color: #6ea6ff;
+}
+
+.error {
+  font-size: 260px;
+  margin: 0;
+  color: #dedede;
+}
+
+.pageNotFound {
+  font-size: 30px;
+  color: #c7c7c7;
+}
